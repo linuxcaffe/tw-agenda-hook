@@ -8,7 +8,7 @@ A task can have several dates; due-date, scheduled, until-date or wait-date. Thi
 - if it has no sched:date, but a due:date, it's the due:date
 - if no due:date, but an until:date, it's the until:date
 - if it has no until:date, but a wait:date, it's the wait:date
-- if no way:date (or any of the others) it has no effective date at all
+- if no wait:date (or any of the others) it has no effective date at all, the uda is cleared.
 The hook script regenerates the date:date (if needed) on-modify and on-add, keeping the effective-date up-to-date.
 
 In order to regenerate the effective date uda for every task in your data, an external (non-hook) script could be run occasionally, to reset older tasks, or anything that might have slipped through the cracks. 
