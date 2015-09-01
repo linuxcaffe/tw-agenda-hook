@@ -1,0 +1,13 @@
+# these configurations are for thetaskwarrior hook-script(s) at 
+#
+# to "activate them" include them from your .taskrc file, something like
+# include ~/path/to/agenda.rc
+
+uda.date.type=date
+uda.date.label=Date
+
+uda.date.indicator=!
+color.uda.date=black on green
+color.uda.date.none=green on black
+urgency.uda.date.coefficient=1.2
+uda.date.default=
