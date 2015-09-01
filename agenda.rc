@@ -18,8 +18,8 @@ report.edate.columns=id,area,project,tags.count,date,description.count,urgency
 report.edate.filter= ( status:pending or status:waiting ) and date.any:
 report.edate.sort=date+,urgency-
 
-report.agenda.description=agenda -- sched, due, until
-report.agenda.labels=ID,Area,Project,Tags,Sched,Due,Until,Description,Urg
-report.agenda.columns=id,area,project,tags.count,scheduled,due,until,description.count,urgency
-report.agenda.filter= ( status:pending or status:waiting ) and ( schedule.any: or due.any: or until.any: )
+report.agenda.description=agenda -- sched, due, until, wait
+report.agenda.labels=ID,Area,Project,Tags,Sched,Due,Until,Wait,Description,Urg
+report.agenda.columns=id,area,project,tags.count,scheduled,due,until,waiting,description.count,urgency
+report.agenda.filter= ( status:pending or status:waiting ) and ( schedule.any: or due.any: or until.any: or wait.any: )
 report.agenda.sort=date+,urgency-
