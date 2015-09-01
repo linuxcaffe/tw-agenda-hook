@@ -11,3 +11,15 @@ color.uda.date=black on green
 color.uda.date.none=green on black
 urgency.uda.date.coefficient=1.2
 uda.date.default=
+
+report.agenda.description=agenda -- sched, due, until
+report.agenda.labels=ID,Area,Project,Tags,Sched,Due,Until,Description,Urg
+report.agenda.columns=id,area,project,tags.count,scheduled,due,until,description.count,urgency
+report.agenda.filter= ( status:pending or status:waiting ) and ( schedule.any: or due.any: or until.any: )
+report.agenda.sort=scheduled+,due+,until+,description+
+
+report.agenda.description=agenda -- sched, due, until
+report.agenda.labels=ID,Area,Project,Tags,Sched,Due,Until,Description,Urg
+report.agenda.columns=id,area,project,tags.count,scheduled,due,until,description.count,urgency
+report.agenda.filter= ( status:pending or status:waiting ) and ( schedule.any: or due.any: or until.any: )
+report.agenda.sort=scheduled+,due+,until+,description+
