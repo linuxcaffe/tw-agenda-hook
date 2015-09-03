@@ -2,6 +2,7 @@
 a hook script to synthesize the value of an edate:date uda, to be used with taskwarrior (http://taskwarrior.org) in the quest to arrive at an effecive agenda report, among other benefits. 
 
 status:in testing
+*WARNING! WARNING!* This script makes wholesale changes to your data! It has no sanity checks and no testing or tests so far! *BACK UP YOUR DATA!!!*
 
 Proof of Concept by bqf, here  --> http://wbsch.de/2015-09-03_on-add_djpstuff.py
 
