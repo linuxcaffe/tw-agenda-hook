@@ -1,25 +1,22 @@
-# these configurations are for thetaskwarrior hook-script(s) at 
+# these configurations are for the taskwarrior hook-script(s) at 
 #
 # to "activate them" include them from your .taskrc file, something like
 # include ~/path/to/agenda.rc
 
-uda.date.type=date
-uda.date.label=Date
-
-uda.date.indicator=!
-color.uda.date=black on green
-color.uda.date.none=green on black
-urgency.uda.date.coefficient=1.2
-uda.date.default=
+# uda.edate.indicator=!
+# color.uda.edate=black on green
+# color.uda.edate.none=green on black
+# urgency.uda.edate.coefficient=1.2
+# uda.date.default=
 
 report.edate.description=effective date -- derived from sched, due, until, wait
-report.edate.labels=ID,Area,Project,Date,Description,Urg
-report.edate.columns=id,area,project,tags.count,date,description.count,urgency
-report.edate.filter= ( status:pending or status:waiting ) and date.any:
-report.edate.sort=date+,urgency-
+report.edate.labels=ID,Area,Project,Tags,eDate,Description,Urg
+report.edate.columns=id,area,project,tags.count,edate,description.count,urgency
+report.edate.filter= ( status:pending or status:waiting ) and edate.any:
+report.edate.sort=edate+,urgency-
 
 report.agenda.description=agenda -- sched, due, until, wait
 report.agenda.labels=ID,Area,Project,Tags,Sched,Due,Until,Wait,Description,Urg
-report.agenda.columns=id,area,project,tags.count,scheduled,due,until,waiting,description.count,urgency
+report.agenda.columns=id,area,project,tags.count,scheduled,due,until,wait,description.count,urgency
 report.agenda.filter= ( status:pending or status:waiting ) and ( schedule.any: or due.any: or until.any: or wait.any: )
-report.agenda.sort=date+,urgency-
+report.agenda.sort=edate+,urgency-
