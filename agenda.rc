@@ -3,6 +3,8 @@
 # to "activate them" include them from your .taskrc file, something like
 # include ~/path/to/agenda.rc
 
+alias.check-edate=modify edate_checkall:DOITNOW
+
 # uda.edate.indicator=!
 # color.uda.edate=black on green
 # color.uda.edate.none=green on black
