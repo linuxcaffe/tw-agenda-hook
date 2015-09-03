@@ -12,8 +12,8 @@ alias.check-edate=modify edate_checkall:DOITNOW
 # uda.date.default=
 
 report.edate.description=effective date -- derived from sched, due, until, wait
-report.edate.labels=ID,Area,Project,Tags,eDate,Description,Urg
-report.edate.columns=id,area,project,tags.count,edate,description.count,urgency
+report.edate.labels=ID,Area,Project,Tags,eDate,s,d,u,w,Description,Urg
+report.edate.columns=id,area,project,tags.count,edate,scjeduled.indicator,due,indicator,until.indicator,wait.indicator,description.count,urgency
 report.edate.filter= ( status:pending or status:waiting ) and edate.any:
 report.edate.sort=edate+,urgency-
 
