@@ -3,7 +3,7 @@ a hook script to synthesize the value of a date:date uda, to be used with taskwa
 
 status:in testing
 
-Proof of Concept by bqf, here  -->
+Proof of Concept by bqf, here  --> http://wbsch.de/2015-09-03_on-add_djpstuff.py
 
 A task can have several dates; due-date, scheduled, until-date or wait-date. This hook script populates a new uda; "date" with the "effective date". If a task has any of these four dates, the effective date is a hierachy of scheduled --> due --> until --> wait. That means
 - if it has a sched:date, it's the sched:date
