@@ -5,8 +5,8 @@
 
 alias.check_edate=( +PENDING or +WAITING ) and ( scheduled.any: or due.any: or until.any: or wait.any: ) and -PARENT modify edate_checkall:DOITNOW
 alias.agd=edate:today agenda
-alias.agw=edate.after:now and edate.before:eoww agenda
-alias.agm=edate.after:now and edate.before:eom agenda
+alias.agw=edate.after:yesterday and edate.before:eoww agenda
+alias.agm=edate.after:yesterday and edate.before:eom agenda
 
 uda.edate.type=date
 uda.edate.label=edate
