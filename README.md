@@ -6,7 +6,7 @@ new reports;
 - agw
 - agm
 - edate
-- 
+
 and new utility command
 - check_edate (used initially, to add edate all your pending data, the hook handles new and modified tasks) 
 
