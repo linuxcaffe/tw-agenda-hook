@@ -14,7 +14,7 @@ uda.edate.label=edate
 uda.edate_checkall.type=string
 uda.edate_checkall.label=foobar
 
-# uda.edate.indicator=!
+uda.edate.indicator=e
 # color.uda.edate=black on green
 # color.uda.edate_checkall.none=black on green
 # color.uda.edate.none=green on black

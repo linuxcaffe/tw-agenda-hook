@@ -25,7 +25,7 @@ def do_djp_stuff(task):
     for d in ["wait", "until", "due", "scheduled"]:
         if d in task:
             edate = task[d]
-    if "date" in task and not edate:
+    if "edate" in task and not edate:
         del task["edate"]
     elif edate:
         task["edate"] = edate
