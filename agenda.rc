@@ -24,7 +24,7 @@ report.edate.filter= ( status:pending or status:waiting ) and edate.any:
 report.edate.sort=edate+,urgency-
 
 report.agenda.description=agenda -- sched, due, until, wait
-report.agenda.labels=ID,Area,Project,Tags,eDate,Sched,Due,Until,Wait,Description,Urg
-report.agenda.columns=id,area,project,tags.count,edate,scheduled,due,until,wait,description.count,urgency
+report.agenda.labels=ID,Area,Project,Tags,Sched,Due,Until,Wait,Description,Urg
+report.agenda.columns=id,area,project,tags.count,scheduled,due,until,wait,description.count,urgency
 report.agenda.filter= ( status:pending or status:waiting ) and ( schedule.any: or due.any: or until.any: or wait.any: )
 report.agenda.sort=edate+,urgency-
