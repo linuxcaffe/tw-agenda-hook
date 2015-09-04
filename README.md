@@ -24,7 +24,7 @@ A task can have several dates; due-date, scheduled, until-date or wait-date. Thi
 
 The hook script regenerates the edate:date (if needed) on-modify and on-add, keeping the effective-date up-to-date.
 
-run the command *task check-edate* in order to regenerate the effective edate uda for every pending task in your data. This command should be run immediately after installing, could be run occasionally, to reset older tasks, or anything that might have slipped through the cracks. 
+run the command *task check_edate* in order to regenerate the effective edate uda for every pending task in your data. This command should be run immediately after installing, could be run occasionally, to reset older tasks, or anything that might have slipped through the cracks. 
 
 This will provide improved use of the scheduled attribute and a chronological sorting of tasks using multiple date-fields, a.k.a. agenda.
 
