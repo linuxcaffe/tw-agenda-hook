@@ -6,6 +6,9 @@ new reports;
 - agw
 - agm
 - edate
+- 
+and new utility command
+- check_edate (used initially, to add edate all your pending data, the hook handles new and modified tasks) 
 
 status: WORKING and in testing
 *WARNING! WARNING!* This script makes wholesale changes to your data! It has no sanity checks and no testing or tests so far! *BACK UP YOUR DATA!!!*
