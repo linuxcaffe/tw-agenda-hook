@@ -3,23 +3,28 @@
 # to "activate them" include them from your .taskrc file, something like
 # include ~/path/to/agenda.rc
 
-alias.check-edate=modify edate_checkall:DOITNOW
+alias.check_edate=( +PENDING or +WAITING ) and ( scheduled.any: or due.any: or until.any: or wait.any: ) and -PARENT modify edate_checkall:DOITNOW
+
+uda.edate.type=date
+uda.edate.label=edate
+uda.edate_checkall.type=string
+uda.edate_checkall.label=foobar
 
 # uda.edate.indicator=!
 # color.uda.edate=black on green
-color.uda.edate_checkall.none=black on green
+# color.uda.edate_checkall.none=black on green
 # color.uda.edate.none=green on black
 # urgency.uda.edate.coefficient=1.2
 # uda.date.default=
 
 report.edate.description=effective date -- derived from sched, due, until, wait
 report.edate.labels=ID,Area,Project,Tags,eDate,S,D,U,W,Description,Urg
-report.edate.columns=id,area,project,tags.count,edate,scjeduled.indicator,due,indicator,until.indicator,wait.indicator,description.count,urgency
+report.edate.columns=id,area,project,tags.count,edate,scheduled,due,until,wait,description.count,urgency
 report.edate.filter= ( status:pending or status:waiting ) and edate.any:
 report.edate.sort=edate+,urgency-
 
 report.agenda.description=agenda -- sched, due, until, wait
-report.agenda.labels=ID,Area,Project,Tags,Sched,Due,Until,Wait,Description,Urg
-report.agenda.columns=id,area,project,tags.count,scheduled,due,until,wait,description.count,urgency
+report.agenda.labels=ID,Area,Project,Tags,eDate,Sched,Due,Until,Wait,Description,Urg
+report.agenda.columns=id,area,project,tags.count,edate,scheduled,due,until,wait,description.count,urgency
 report.agenda.filter= ( status:pending or status:waiting ) and ( schedule.any: or due.any: or until.any: or wait.any: )
 report.agenda.sort=edate+,urgency-
