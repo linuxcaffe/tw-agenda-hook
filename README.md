@@ -2,10 +2,11 @@ This hook provides an agenda report, that sorts scheduled, due, until and waitin
 
 new reports;
 - agenda
-- agd
-- agw
-- agm
-- edate
+- agd (today)
+- agw (this week)
+- agm (this month)
+- agx (before now)
+- edate (diagnostic)
 
 and new utility command
 - check_edate (used initially, to add edate all your pending data, the hook handles new and modified tasks) 
