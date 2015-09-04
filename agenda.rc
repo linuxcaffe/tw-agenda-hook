@@ -4,9 +4,10 @@
 # include ~/path/to/agenda.rc
 
 alias.check_edate=( +PENDING or +WAITING ) and ( scheduled.any: or due.any: or until.any: or wait.any: ) and -PARENT modify edate_checkall:DOITNOW
-alias.agd=+DAY agenda
-alias.agw=+WEEK agenda
-alias.agm=+MONTH agenda
+alias.agd=edate:today agenda
+# alias.agw=edate:week agenda
+alias.agw=( edate.after:sow and edate.before:eow ) agenda
+alias.agm=( edate.after:som and edate.before:eom ) agenda
 
 uda.edate.type=date
 uda.edate.label=edate
