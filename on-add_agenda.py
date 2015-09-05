@@ -10,12 +10,9 @@
 # uda.edate.label=edate
 # uda.edate.type=date
 #
-# UDA needed for checking all tasks:
-# uda.edate_checkall.label=foobar
-# uda.edate_checkall.type=string
-#
 # In order to set an edate on existing tasks, run:
-#  $ task modify edate_checkall:DOITNOW
+#  $ task modify +edate_checkall
+# and let it modify all tasks.
 
 import json
 import sys
@@ -31,8 +28,8 @@ def do_djp_stuff(task):
         task["edate"] = edate
 
     # This is for retroactively adding "edate" to all tasks. See above.
-    if "edate_checkall" in task:
-        del task["edate_checkall"]
+    if "tags" in task and "edate_checkall" in task["tags"]:
+        task["tags"].remove("edate_checkall")
 
     print(json.dumps(task))
 
