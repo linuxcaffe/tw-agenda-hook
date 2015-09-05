@@ -7,6 +7,9 @@ alias.check_edate=( +PENDING or +WAITING ) and ( scheduled.any: or due.any: or u
 alias.agd=edate:today agenda
 alias.agw=edate.after:yesterday and edate.before:eoww agenda
 alias.agm=edate.after:yesterday and edate.before:eom agenda
+alias.agt=edate:tomorrow agenda
+alias.agnw=edate.after:eow and edate.before:eow+1w agenda
+alias.agnm=edate.after:eom and edate.before:eom+1mo agenda
 alias.agx=edate.before:now agenda 
 
 uda.edate.type=date
