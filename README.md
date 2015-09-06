@@ -3,8 +3,11 @@ This hook provides an agenda report, that sorts scheduled, due, until and waitin
 new reports;
 - agenda
 - agd (today)
+- agt (tomorrow)
 - agw (this week)
+- agnw (next week)
 - agm (this month)
+- agnm (next month)
 - agx (before now)
 - edate (diagnostic)
 
