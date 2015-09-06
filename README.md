@@ -9,7 +9,7 @@ new reports;
 - agm (this month)
 - agnm (next month)
 - agx (before now)
-- edate (diagnostic)
+- edate (diagnostic, if edate and agenda give the same # of tasks, it's working)
 
 and new utility command
 - check_edate (used initially, to add edate all your pending data, the hook handles new and modified tasks) 
