@@ -3,7 +3,7 @@
 # to "activate them" include them from your .taskrc file, something like
 # include ~/path/to/agenda.rc
 
-alias.check_edate=( +PENDING or +WAITING ) and ( scheduled.any: or due.any: or until.any: or wait.any: ) and -PARENT modify edate_checkall:DOITNOW
+alias.check_edate=( +PENDING or +WAITING ) and ( scheduled.any: or due.any: or until.any: or wait.any: ) and -PARENT modify +edate_checkall
 alias.agd=edate:today agenda
 alias.agw=edate.after:yesterday and edate.before:eoww agenda
 alias.agm=edate.after:yesterday and edate.before:eom agenda
@@ -14,8 +14,6 @@ alias.agx=edate.before:now agenda
 
 uda.edate.type=date
 uda.edate.label=edate
-uda.edate_checkall.type=string
-uda.edate_checkall.label=foobar
 
 uda.edate.indicator=e
 # color.uda.edate=black on green
