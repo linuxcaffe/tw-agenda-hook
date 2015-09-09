@@ -1,6 +1,6 @@
 This hook provides an agenda report, that sorts scheduled, due, until and waiting tasks together, chronologically. It does so by tracking an "effective date".
 
-status: WORKING? maybe not? still testing.. approach with caution!
+status: WORKING! still testing.. approach with caution!
 
 new reports;
 - agenda
