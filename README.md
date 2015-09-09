@@ -1,5 +1,7 @@
 This hook provides an agenda report, that sorts scheduled, due, until and waiting tasks together, chronologically. It does so by tracking an "effective date".
 
+status: WORKING? maybe not? still testing.. approach with caution!
+
 new reports;
 - agenda
 - agd (today)
@@ -14,7 +16,6 @@ new reports;
 and new utility command
 - check_edate (used initially, to add edate all your pending data, the hook handles new and modified tasks) 
 
-status: WORKING and in testing
 *WARNING! WARNING!* This script makes wholesale changes to your data! It has no sanity checks and no testing or tests so far! *BACK UP YOUR DATA!!!*
 
 Proof of Concept by bqf, here  --> http://wbsch.de/2015-09-03_on-add_djpstuff.py
