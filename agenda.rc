@@ -3,7 +3,10 @@
 # to "activate them" include them from your .taskrc file, something like
 # include ~/path/to/agenda.rc
 
-alias.check_edate=( +PENDING or +WAITING ) and ( scheduled.any: or due.any: or until.any: or wait.any: ) and -PARENT modify +edate_checkall
+# alias.check_edate=( +PENDING or +WAITING ) and ( scheduled.any: or due.any: or until.any: or wait.any: ) modify +edate_checkall
+alias.check_edate=( +PENDING or +WAITING ) and ( scheduled.any: or due.any: or until.any: or wait.any: ) modify +edate_checkall
+# alias.check_edate=modify +edate_checkall
+alias.resched=scheduled.before:today mod sched: +sched ;task +sched
 alias.agd=edate:today agenda
 alias.agw=edate.after:yesterday and edate.before:eoww agenda
 alias.agm=edate.after:yesterday and edate.before:eom agenda
@@ -23,13 +26,13 @@ uda.edate.indicator=e
 # uda.date.default=
 
 report.edate.description=effective date -- derived from sched, due, until, wait
-report.edate.labels=ID,Area,Project,Tags,eDate,S,D,U,W,Description,Urg
-report.edate.columns=id,area,project,tags.count,edate,scheduled,due,until,wait,description.count,urgency
+report.edate.labels=ID,Project,Tags,eDate,S,D,U,W,Description,Urg
+report.edate.columns=id,project,tags.count,edate,scheduled,due,until,wait,description.count,urgency
 report.edate.filter= ( status:pending or status:waiting ) and edate.any:
 report.edate.sort=edate+,urgency-
 
 report.agenda.description=agenda -- sched, due, until, wait
-report.agenda.labels=ID,Area,Project,Tags,Sched,Due,Until,Wait,Description,Urg
-report.agenda.columns=id,area,project,tags.count,scheduled,due,until,wait,description.count,urgency
+report.agenda.labels=ID,Project,Tags,Sched,Due,Until,Wait,Description,Urg
+report.agenda.columns=id,project,tags.count,scheduled,due,until,wait,description.count,urgency
 report.agenda.filter= ( status:pending or status:waiting ) and ( schedule.any: or due.any: or until.any: or wait.any: )
 report.agenda.sort=edate+,urgency-
