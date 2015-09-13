@@ -4,9 +4,9 @@
 # include ~/path/to/agenda.rc
 
 # alias.check_edate=( +PENDING or +WAITING ) and ( scheduled.any: or due.any: or until.any: or wait.any: ) modify +edate_checkall
-alias.check_edate=( +PENDING or +WAITING ) and ( scheduled.any: or due.any: or until.any: or wait.any: ) modify +edate_checkall
+alias.check_edate="( +PENDING or +WAITING ) and ( scheduled.any: or due.any: or until.any: or wait.any: ) modify +edate_checkall"
 # alias.check_edate=modify +edate_checkall
-alias.resched=scheduled.before:today mod sched: +sched ;task +sched
+alias.resched=execute "/home/djp/.task/scripts/resched.sh"
 alias.agd=edate:today agenda
 alias.agw=edate.after:yesterday and edate.before:eoww agenda
 alias.agm=edate.after:yesterday and edate.before:eom agenda
@@ -18,11 +18,10 @@ alias.agx=edate.before:now agenda
 uda.edate.type=date
 uda.edate.label=edate
 
-uda.edate.indicator=e
 # color.uda.edate=black on green
 # color.uda.edate_checkall.none=black on green
 # color.uda.edate.none=green on black
-# urgency.uda.edate.coefficient=1.2
+urgency.uda.edate.coefficient=2
 # uda.date.default=
 
 report.edate.description=effective date -- derived from sched, due, until, wait
@@ -33,6 +32,13 @@ report.edate.sort=edate+,urgency-
 
 report.agenda.description=agenda -- sched, due, until, wait
 report.agenda.labels=ID,Project,Tags,Sched,Due,Until,Wait,Description,Urg
-report.agenda.columns=id,project,tags.count,scheduled,due,until,wait,description.count,urgency
-report.agenda.filter= ( status:pending or status:waiting ) and ( schedule.any: or due.any: or until.any: or wait.any: )
+report.agenda.columns=id,project,tags,scheduled,due,until,wait,description.count,urgency
+report.agenda.filter= ( status:pending or status:waiting ) and ( schedule.any: or due.any: or until.any: or wait.any: or +sch )
 report.agenda.sort=edate+,urgency-
+
+
+report.sched.description=Scheduled tasks, and thise with +sch tag
+report.sched.labels=ID,Project,Tags,Sched,Description,Urg
+report.sched.columns=id,project,tags,scheduled,description,urgency
+report.sched.filter= ( status:pending or status:waiting ) and ( schedule.any: or +sch )
+report.sched.sort=scheduled+,urgency-
