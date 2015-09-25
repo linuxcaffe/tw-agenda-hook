@@ -47,7 +47,7 @@ Taskwarrior users with this extension can assign the whichever type of date (sch
 
 in whatever combination of dates you choose, those tasks will be sorted together according to "effective date".
 
-### Bugs
+### Bugs/ Feature requests/ Pull requests
 
 no doubt! fork/ file issue/ comment at https://github.com/linuxcaffe/tw-agenda-hook
 
