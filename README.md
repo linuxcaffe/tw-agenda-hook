@@ -25,7 +25,18 @@ new reports;
 
 ### Advantages
 
-### Benefits
+Without this extension, tasks can be sorted by due OR sched OR until OR wait, and the user has to choose which ONE of these dates to use as a primary sort. This forces the user to apply hard-due-dates (for example) where a sched:date might be more accurate. Similarly, with this extension, users can assign ONLY a wait:date, or an until:date, and those tasks will be shown in chronological sequence, along with tasks that might have only a due:date or sched:date. 
+
+### Benefitst
+
+Taskwarrior users with this extension can assign the type of date (sched, due, until, wait) that makes sense for the specific task.
+
+- due:date when tasks are actually due (have a hard deadline) 
+- sched:date when you decide you want to do a task, but with no external deadline
+- until:date for those tasks that can't be done after that date (like "go to event")
+- wait:date for those tasks you don't want to see till then
+
+and whatever combination of dates you choose, those tasks will be sorted together according to "effective date".
 
 ### Bugs
 
