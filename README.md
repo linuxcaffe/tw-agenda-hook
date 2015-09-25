@@ -1,4 +1,6 @@
-tw-agenda-hook is a taskwarrior extension that provides an edate (effective date) and agenda reports. With this hook installed, tasks can have any combination of scheduled, due, until or wait dates, and can then be sorted by edate (aka agenda) combining all of those into a coherent chronological order.
+## tw-agenda-hook
+
+is a taskwarrior extension that provides an edate (effective date) and agenda reports. With this hook installed, tasks can have any combination of scheduled, due, until or wait dates, and can then be sorted by edate (aka agenda) combining all of those into a coherent chronological order.
 
 status: Working well, still in testing
 
