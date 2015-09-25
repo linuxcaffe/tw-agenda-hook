@@ -49,7 +49,7 @@ in whatever combination of dates you choose, those tasks will be sorted together
 
 ### Bugs/ Feature requests/ Pull requests
 
-no doubt! fork/ file issue/ comment at https://github.com/linuxcaffe/tw-agenda-hook
+fork/ file issues/ comment at https://github.com/linuxcaffe/tw-agenda-hook
 
 ### Credits
 
