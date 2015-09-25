@@ -22,7 +22,7 @@ new reports;
 - agm (this month)
 - agnm (next month)
 - agx (before now)
-- edate (diagnostic, if edate and agenda give the same # of tasks, it's working)
+- edate (diagnostic)
 
 These reports can be used in combination with any other task filters, so that _'task pro:foo agw'_ (for example) will show all foo project tasks that are "on your agenda" for this week. 
 
