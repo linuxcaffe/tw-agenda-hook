@@ -25,7 +25,7 @@ new reports;
 
 ### Advantages
 
-Without this extension, tasks can be sorted by due OR sched OR until OR wait, and the user has to choose which ONE of these dates to use as a primary sort. This forces the user to apply hard-due-dates (for example) where a sched:date might be more accurate. Similarly, with this extension, users can assign ONLY a wait:date, or an until:date, and those tasks will be shown in chronological sequence, along with tasks that might have only a due:date or sched:date. 
+Without this extension, tasks can be sorted by due OR sched OR until OR wait, and the user has to choose which ONE of these dates to use as a primary sort. This forces the user to apply hard-due-dates (for example) where a sched:date might be more accurate. Similarly, with this extension, users can assign just a wait:date, or an until:date, or any combination, and those tasks will be shown in chronological sequence, along with tasks that might have only a due:date or sched:date. 
 
 ### Benefits
 
