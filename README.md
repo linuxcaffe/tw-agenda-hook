@@ -21,6 +21,8 @@ new reports;
 - agx (before now)
 - edate (diagnostic, if edate and agenda give the same # of tasks, it's working)
 
+These reports can be used in combination with any other task filters, so that 'task pro:foo agw' will ahow all foo task that are "on your agenda" this week. 
+
 (edate can also be used in your own reports)
 
 ### Advantages
