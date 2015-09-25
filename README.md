@@ -4,6 +4,8 @@ status: Working well, still in testing
 
 caveat: Perpetual Proof of Concept, until a "real programmer" can apply some real expertise, but it worksforme.
 
+see also: needs.txt help file for more detailed install/ config/ usage suggestions.
+
 ### Features
 - hook-script automatically generates edate for all new and modified tasks
 - check_edate script provided, to batch-process tasks when getting started
@@ -25,6 +27,8 @@ new reports;
 
 ### Benefits
 
+### Bugs
 
+### Credits
 
 
