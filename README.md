@@ -53,5 +53,5 @@ fork/ file issues/ comment at https://github.com/linuxcaffe/tw-agenda-hook
 
 ### Credits
 
-- Bash script cobbled together by djp
+- concept and config files cobbled together by djp
 - hook-script written by bqf 
