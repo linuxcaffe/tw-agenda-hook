@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# PoC of djpstuff. https://github.com/linuxcaffe/tw-effective-date-hook
+# PoC of djpstuff. https://github.com/linuxcaffe/tw-agenda-hook
 #
 # Save as on-add_agenda.py in hooks directory, then change to hooks folder and:
 #  $ ln -s on-add_agenda.py on-modify_agenda.py
@@ -17,7 +17,7 @@
 import json
 import sys
 
-def do_djp_stuff(task):
+def create_edate(task):
     edate = None
     for d in ["wait", "until", "due", "scheduled"]:
         if d in task:
@@ -38,6 +38,6 @@ old = sys.stdin.readline()
 new = sys.stdin.readline()
 
 if not new:
-    do_djp_stuff(json.loads(old))
+    create_edate(json.loads(old))
 else:
-    do_djp_stuff(json.loads(new))
+    create_edate(json.loads(new))
