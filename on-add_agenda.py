@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # PoC of djpstuff. https://github.com/linuxcaffe/tw-agenda-hook
 #
