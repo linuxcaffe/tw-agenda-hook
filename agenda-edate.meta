@@ -1,17 +1,18 @@
 # agenda-edate.meta
-# Creates edate (effective date) from due, sched, wait and until, and sort with agenda reports
+# Creates "effective date" from due, sched, wait and until, Adds new agenda reports
 
 name=agenda-edate
 version=1.0.0
 type=hook
-description=Creates edate (effective date) from due, sched, wait and until, and sort with agenda reports
+description=Creates "effective date" from due, sched, wait and until, Adds new agenda reports
 repo=https://github.com/linuxcaffe/tw-agenda-hook
 base_url=https://raw.githubusercontent.com/linuxcaffe/tw-agenda-hook/main/
-files=on-add_agenda.py:hook,on-modify_agenda.py:hook,agenda.rc:config,README.md:doc
-tags=edate,agenda,sort,reports,hook
+files=on-add_agenda.py:hook,on-modify_agenda.py:hook,agenda-edate.install:script,agenda.rc:config,README.md:doc
+tags=agenda,edate,reports,hook
 
-checksums=f9a434a5c50ec0b84ba1cf16906345dfe923e7a6adbfaf56ec52bfbaaa994eb2,f9a434a5c50ec0b84ba1cf16906345dfe923e7a6adbfaf56ec52bfbaaa994eb2,88d295753d54a2a14d0d182870b682dda3489e5b4d0f70c01bdc46fe60ac34bc,8aab11b8a7e713dacc2d69431d5dfaccd635021dc0370bede441ffda767fc722
+checksums=f9a434a5c50ec0b84ba1cf16906345dfe923e7a6adbfaf56ec52bfbaaa994eb2,f9a434a5c50ec0b84ba1cf16906345dfe923e7a6adbfaf56ec52bfbaaa994eb2,05b4fdd6f6ffaae5ba48b9946b8bafe477b2ab9ad640f0488eea07639201f901,88d295753d54a2a14d0d182870b682dda3489e5b4d0f70c01bdc46fe60ac34bc,8aab11b8a7e713dacc2d69431d5dfaccd635021dc0370bede441ffda767fc722
 
-author=linuxcaffe
+author=Designed by linuxcaffe, original script by bqf
 license=MIT
 requires_taskwarrior=2.6.0
+requires_python=3

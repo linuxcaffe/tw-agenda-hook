@@ -18,8 +18,8 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 tw_msg() { echo -e "${BLUE}[tw]${NC} $*"; }
-tw_success() { echo -e "${GREEN}[tw] ✓${NC} $*"; }
-tw_error() { echo -e "${RED}[tw] ✗${NC} $*" >&2; }
+tw_success() { echo -e "${GREEN}[tw] âœ“${NC} $*"; }
+tw_error() { echo -e "${RED}[tw] âœ—${NC} $*" >&2; }
 
 # Debug support
 DEBUG_LEVEL="${TW_DEBUG:-0}"
@@ -76,6 +76,15 @@ install() {
     chmod +x "$HOOKS_DIR/on-modify_agenda.py"
     debug_msg "Installed hook: $HOOKS_DIR/on-modify_agenda.py" 2
 
+    debug_msg "Downloading script: agenda-edate.install" 2
+    curl -fsSL "$BASE_URL/agenda-edate.install" -o "$SCRIPTS_DIR/agenda-edate.install" || {
+        tw_error "Failed to download agenda-edate.install"
+        debug_msg "Download failed: agenda-edate.install" 1
+        return 1
+    }
+    chmod +x "$SCRIPTS_DIR/agenda-edate.install"
+    debug_msg "Installed script: $SCRIPTS_DIR/agenda-edate.install" 2
+
     debug_msg "Downloading config: agenda.rc" 2
     curl -fsSL "$BASE_URL/agenda.rc" -o "$CONFIG_DIR/agenda.rc" || {
         tw_error "Failed to download agenda.rc"
@@ -111,6 +120,8 @@ install() {
     debug_msg "Manifest entry: $HOOKS_DIR/on-add_agenda.py" 3
     echo "$APPNAME|$VERSION|$HOOKS_DIR/on-modify_agenda.py||$TIMESTAMP" >> "$MANIFEST_FILE"
     debug_msg "Manifest entry: $HOOKS_DIR/on-modify_agenda.py" 3
+    echo "$APPNAME|$VERSION|$SCRIPTS_DIR/agenda-edate.install||$TIMESTAMP" >> "$MANIFEST_FILE"
+    debug_msg "Manifest entry: $SCRIPTS_DIR/agenda-edate.install" 3
     echo "$APPNAME|$VERSION|$CONFIG_DIR/agenda.rc||$TIMESTAMP" >> "$MANIFEST_FILE"
     debug_msg "Manifest entry: $CONFIG_DIR/agenda.rc" 3
     echo "$APPNAME|$VERSION|$DOCS_DIR/agenda-edate_README.md||$TIMESTAMP" >> "$MANIFEST_FILE"
