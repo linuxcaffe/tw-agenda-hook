@@ -6,7 +6,7 @@ version=1.0.0
 type=hook
 description=Creates "effective date" from due, sched, wait and until, Adds new agenda reports
 repo=https://github.com/linuxcaffe/tw-agenda-hook
-base_url=https://raw.githubusercontent.com/linuxcaffe/tw-agenda-hook/main/
+base_url=https://raw.githubusercontent.com/linuxcaffe/tw-agenda-hook/master/
 files=on-add_agenda.py:hook,on-modify_agenda.py:hook,agenda-edate.install:script,agenda.rc:config,README.md:doc
 tags=agenda,edate,reports,hook
 
