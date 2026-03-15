@@ -30,12 +30,12 @@ report.edate.sort=edate+,urgency-
 report.agenda.description=agenda -- sched, due, until, wait
 report.agenda.labels=ID,Project,Tags,Sched,Due,Until,Wait,Description,Urg
 report.agenda.columns=id,project,tags,scheduled,due,until,wait,description.count,urgency
-report.agenda.filter= ( status:pending or status:waiting ) and ( schedule.any: or due.any: or until.any: or wait.any: )
+report.agenda.filter= ( status:pending or status:waiting ) and ( scheduled.any: or due.any: or until.any: or wait.any: )
 report.agenda.sort=edate+,urgency-
 
 
 report.sched.description=Scheduled tasks, and thise with +sch tag
 report.sched.labels=ID,Project,Tags,Sched,Description,Urg
 report.sched.columns=id,project,tags,scheduled,description,urgency
-report.sched.filter= ( status:pending or status:waiting ) and ( schedule.any: or +sch )
+report.sched.filter= ( status:pending or status:waiting ) and ( scheduled.any: or +sch )
 report.sched.sort=scheduled+,urgency-
