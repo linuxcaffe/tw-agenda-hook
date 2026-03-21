@@ -34,7 +34,7 @@ report.agenda.filter= ( status:pending or status:waiting ) and ( scheduled.any: 
 report.agenda.sort=edate+,urgency-
 
 
-report.sched.description=Scheduled tasks, and thise with +sch tag
+report.sched.description=Scheduled tasks, and those with +sch tag
 report.sched.labels=ID,Project,Tags,Sched,Description,Urg
 report.sched.columns=id,project,tags,scheduled,description,urgency
 report.sched.filter= ( status:pending or status:waiting ) and ( scheduled.any: or +sch )
